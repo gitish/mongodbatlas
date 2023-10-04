@@ -26,15 +26,15 @@ The testing package in Go provides a built-in benchmarking framework that allows
 
 Here are the key components and features of the testing package's benchmarking capabilities:
 
-*Benchmark Functions*: Benchmarking in Go is achieved by defining benchmark functions. A benchmark function's name starts with `Benchmark` followed by a descriptive name. For example, `BenchmarkMyFunction`.
+**Benchmark Functions**: Benchmarking in Go is achieved by defining benchmark functions. A benchmark function's name starts with `Benchmark` followed by a descriptive name. For example, `BenchmarkMyFunction`.
 
-*Benchmarking Setup and Teardown*: You can use the `b *testing.B` parameter in a benchmark function to control the number of iterations and set up any necessary preconditions before benchmarking begins. The `b.N` field represents the number of iterations to run the benchmark.
+**Benchmarking Setup and Teardown**: You can use the `b *testing.B` parameter in a benchmark function to control the number of iterations and set up any necessary preconditions before benchmarking begins. The `b.N` field represents the number of iterations to run the benchmark.
 
-*Execution Time Measurement*: The `b.StartTimer()` and `b.StopTimer()` functions allow you to start and stop the timer during the benchmark. This enables you to measure the execution time of the code between these calls.
+**Execution Time Measurement**: The `b.StartTimer()` and `b.StopTimer()` functions allow you to start and stop the timer during the benchmark. This enables you to measure the execution time of the code between these calls.
 
-*Parallel Benchmarking*: You can specify that a benchmark should be run in parallel by using the `b.RunParallel()` method. This is useful for testing the performance of concurrent code.
+**Parallel Benchmarking**: You can specify that a benchmark should be run in parallel by using the `b.RunParallel()` method. This is useful for testing the performance of concurrent code.
 
-*Benchmark Reporting*: After running a benchmark, the `go test` command generates a report that includes the number of iterations per second (ops) and the time taken per operation (ns/op). This information helps you assess the performance of your code.
+**Benchmark Reporting**: After running a benchmark, the `go test` command generates a report that includes the number of iterations per second (ops) and the time taken per operation (ns/op). This information helps you assess the performance of your code.
 
 Here's an example of a simple benchmark function:
 ```
